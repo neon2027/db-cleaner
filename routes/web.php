@@ -13,10 +13,10 @@ Route::prefix($prefix)
     ->middleware($middleware)
     ->group(function () {
         Route::get('/', function () {
-            return view('db-cleaner::livewire.dashboard');
+            return view('db-cleaner::pages.dashboard');
         })->name('db-cleaner.dashboard');
 
         Route::get('/table/{table}', function (string $table) {
-            return view('db-cleaner::livewire.table-report', compact('table'));
+            return view('db-cleaner::pages.table', compact('table'));
         })->name('db-cleaner.table');
     });

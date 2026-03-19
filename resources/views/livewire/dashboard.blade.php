@@ -1,4 +1,4 @@
-<x-db-cleaner::layout title="Dashboard">
+<div>
     <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
         <h1 style="font-size: 1.5rem; font-weight: 700;">Database Quality Dashboard</h1>
         <button wire:click="refresh" class="btn btn-secondary">
@@ -128,4 +128,4 @@
 
     {{-- Scan runner --}}
     <livewire:db-cleaner::scan-runner />
-</x-db-cleaner::layout>
+</div>

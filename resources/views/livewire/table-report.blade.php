@@ -1,4 +1,4 @@
-<x-db-cleaner::layout :title="'Table: ' . $table">
+<div>
     <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
         <a href="{{ route('db-cleaner.dashboard') }}" style="color: #64748b; text-decoration: none;">← Back</a>
         <h1 style="font-size: 1.5rem; font-weight: 700;">{{ $table }}</h1>
@@ -27,7 +27,6 @@
             </div>
         </div>
 
-        {{-- Score trend --}}
         @if(!empty($history))
         <div class="card" style="margin-bottom: 1.5rem;">
             <div class="card-title">Score History</div>
@@ -55,7 +54,6 @@
         </div>
         @endif
 
-        {{-- Per-column breakdown --}}
         <div class="card">
             <div class="card-title">Column Analysis</div>
             <table>
@@ -99,8 +97,7 @@
         </div>
     @endif
 
-    {{-- Cleaner panel --}}
     <div id="cleaner-section">
         <livewire:db-cleaner::cleaner-panel :table="$table" />
     </div>
-</x-db-cleaner::layout>
+</div>
