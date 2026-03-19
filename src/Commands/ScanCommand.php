@@ -59,7 +59,7 @@ class ScanCommand extends Command
             $scorer = new QualityScorer(config('db-cleaner', []));
             $report = $scorer->score($analysis);
 
-            $scanResult = ScanResult::fromAnalysis($analysis, $report, config('db-cleaner.connection', 'default'));
+            $scanResult = ScanResult::fromAnalysis($analysis, $report, config('db-cleaner.connection') ?? config('database.default'));
 
             ScanCompleted::dispatch($analysis, $scanResult);
 
