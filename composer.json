@@ -1,0 +1,52 @@
+{
+    "name": "laravelldone/db-cleaner",
+    "description": "Scan database tables for data quality issues (duplicates, typos, whitespace, casing) with a Livewire dashboard and REST API",
+    "type": "library",
+    "license": "MIT",
+    "keywords": ["laravel", "database", "data-quality", "cleaner", "duplicates", "livewire"],
+    "require": {
+        "php": "^8.2",
+        "illuminate/support": "^11.0|^12.0",
+        "illuminate/database": "^11.0|^12.0",
+        "illuminate/console": "^11.0|^12.0",
+        "illuminate/http": "^11.0|^12.0",
+        "livewire/livewire": "^3.0|^4.0",
+        "spatie/laravel-package-tools": "^1.9"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^9.0|^10.0",
+        "pestphp/pest": "^2.0|^3.0",
+        "pestphp/pest-plugin-laravel": "^2.0|^3.0",
+        "laravel/pint": "^1.0",
+        "mockery/mockery": "^1.6",
+        "nunomaduro/larastan": "^2.0|^3.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Laravelldone\\DbCleaner\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Laravelldone\\DbCleaner\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Laravelldone\\DbCleaner\\DbCleanerServiceProvider"
+            ],
+            "aliases": {
+                "DbCleaner": "Laravelldone\\DbCleaner\\Facades\\DbCleaner"
+            }
+        }
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
