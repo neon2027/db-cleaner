@@ -127,5 +127,5 @@
     </div>
 
     {{-- Scan runner --}}
-    <livewire:db-cleaner::scan-runner />
+    <livewire:db-cleaner.scan-runner />
 </div>

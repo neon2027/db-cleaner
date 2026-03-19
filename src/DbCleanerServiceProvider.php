@@ -54,10 +54,10 @@ class DbCleanerServiceProvider extends PackageServiceProvider
         }
 
         try {
-            Livewire::component('db-cleaner::dashboard', Dashboard::class);
-            Livewire::component('db-cleaner::table-report', TableReport::class);
-            Livewire::component('db-cleaner::scan-runner', ScanRunner::class);
-            Livewire::component('db-cleaner::cleaner-panel', CleanerPanel::class);
+            Livewire::component('db-cleaner.dashboard', Dashboard::class);
+            Livewire::component('db-cleaner.table-report', TableReport::class);
+            Livewire::component('db-cleaner.scan-runner', ScanRunner::class);
+            Livewire::component('db-cleaner.cleaner-panel', CleanerPanel::class);
         } catch (\Throwable) {
             // Livewire not fully booted (e.g. in test environments without Livewire)
         }

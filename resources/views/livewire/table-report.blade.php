@@ -98,6 +98,6 @@
     @endif
 
     <div id="cleaner-section">
-        <livewire:db-cleaner::cleaner-panel :table="$table" />
+        <livewire:db-cleaner.cleaner-panel :table="$table" />
     </div>
 </div>
